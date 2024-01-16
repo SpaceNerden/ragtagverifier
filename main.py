@@ -21,7 +21,7 @@ async def check_files(session: TentacleSession, data: dict):
         return {"video_id": data["video_id"], "file": data["file"], "dead": True, "message": "Timed Out (5s)"}
     except Exception as e:
         print(e)
-        return {"video_id": data["video_id"], "file": data["file"], "dead": True, "message": f"Unknown Error ({e.})"}
+        return {"video_id": data["video_id"], "file": data["file"], "dead": True, "message": f"Unknown Error ({e})"}
 
 
 for channel_id in channel_ids:
