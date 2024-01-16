@@ -5,9 +5,7 @@ from octopus_api import TentacleSession, OctopusApi
 
 client = OctopusApi(rate=20, resolution="sec")
 
-# channel_ids = input("Space separated list of channel IDs: ").split(" ")
-channel_ids = ["UCAWSyEs_Io8MtpY3m-zqILA", "UCahgMxSIQ2zIRrPKhM6Mjvg", "UCGaN6JMiDHZSkPXt-82b6yQ"]
-
+channel_ids = input("Space separated list of channel IDs: ").split(" ")
 
 async def get_videos(session: TentacleSession, data: dict):
     async with session.get(url=data['url']) as response:
