@@ -24,7 +24,6 @@ async def check_files(session: TentacleSession, data: dict):
 for channel_id in channel_ids:
     max_page = requests.get(
         f"https://archive.ragtag.moe/api/v1/search?channel_id={channel_id}").json()["hits"]["total"]["value"]
-    max_page = 10
     print(f"Checking {channel_id} for {max_page} pages of videos")
 
     request_list = [{
